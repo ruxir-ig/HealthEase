@@ -25,6 +25,8 @@ wheels/
 # Virtual environments
 .env
 .venv
+.streamlit/
+*.streamlit/
 env/
 venv/
 ENV/

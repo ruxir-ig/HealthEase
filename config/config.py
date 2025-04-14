@@ -20,7 +20,7 @@ class Config:
     
     SECRET_KEY = os.getenv('SECRET_KEY')
     
-    EMERGENCY_PHONE = os.getenv('EMERGENCY_PHONE', '911')
+    EMERGENCY_PHONE = os.getenv('EMERGENCY_PHONE', '102')
     
     SESSION_LIFETIME = 24 * 60 * 60  # 24 hours in seconds
     
