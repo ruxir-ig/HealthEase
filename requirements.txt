@@ -19,3 +19,4 @@ requests
 streamlit-option-menu
 datasets
 sentencepiece
+huggingface_hub
