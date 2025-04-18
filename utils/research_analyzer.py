@@ -32,8 +32,8 @@ class ResearchAnalyzer:
     def __init__(self, models_dir="models"):
         self.models_dir = models_dir
         
-        self.tokenizer = AutoTokenizer.from_pretrained("Krishna2908/pubmedbert_hf/tokenizer")
-        self.model = AutoModelForSequenceClassification.from_pretrained("Krishna2908/pubmedbert_hf/model")
+        self.tokenizer = AutoTokenizer.from_pretrained("Krishna2908/pubmedbert_hf", subfolder="tokenizer")
+        self.model = AutoModelForSequenceClassification.from_pretrained("Krishna2908/pubmedbert_hf", subfolder="model")
 
         
         self.summarizer = pipeline(
