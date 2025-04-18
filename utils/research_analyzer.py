@@ -39,8 +39,8 @@ class ResearchAnalyzer:
         # Load Pegasus summarization model and tokenizer from subfolders in repo
         self.summarizer = pipeline(
             "summarization",
-            model="Krishna2908/pegasus_xsum_hf",
-            tokenizer="Krishna2908/pegasus_xsum_hf",
+            model="Krishna2908/pegasus_xsum",
+            tokenizer="Krishna2908/pegasus_xsum",
             model_kwargs={"subfolder": "model"},
             tokenizer_kwargs={"subfolder": "tokenizer"}
         )
