@@ -32,16 +32,16 @@ class ResearchAnalyzer:
     def __init__(self, models_dir="models"):
         self.models_dir = models_dir
         
-        pubmedbert_path = os.path.join(self.models_dir, "PubMedBERT")
-        pubmedbert_tokenizer_path = os.path.join(self.models_dir, "PubMedBERT_tokenizer")
-        self.tokenizer = AutoTokenizer.from_pretrained(pubmedbert_tokenizer_path)
-        self.model = AutoModelForSequenceClassification.from_pretrained(pubmedbert_path)
+        self.tokenizer = AutoTokenizer.from_pretrained("microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract")
+        self.model = AutoModelForSequenceClassification.from_pretrained("microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract")
+
         
         self.summarizer = pipeline(
             "summarization",
-            model=Config.TEXT_GENERATION_MODEL,
-            tokenizer=Config.TEXT_GENERATION_TOKENIZER
+            model="google/pegasus-xsum",
+            tokenizer="google/pegasus-xsum"
         )
+
 
     @staticmethod
     def clean_text(text):
