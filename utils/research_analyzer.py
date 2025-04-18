@@ -32,14 +32,14 @@ class ResearchAnalyzer:
     def __init__(self, models_dir="models"):
         self.models_dir = models_dir
         
-        self.tokenizer = AutoTokenizer.from_pretrained("microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract")
-        self.model = AutoModelForSequenceClassification.from_pretrained("microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract")
+        self.tokenizer = AutoTokenizer.from_pretrained("Krishna2908/pubmedbert_hf/tokenizer")
+        self.model = AutoModelForSequenceClassification.from_pretrained("Krishna2908/pubmedbert_hf/model")
 
         
         self.summarizer = pipeline(
             "summarization",
-            model="google/pegasus-xsum",
-            tokenizer="google/pegasus-xsum"
+            model="Krishna2908/pegasus_xsum/model",
+            tokenizer="Krishna2908/pegasus_xsum/tokenizer"
         )
 
 
