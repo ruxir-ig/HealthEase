@@ -5,7 +5,7 @@ import random
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 class SymptomAnalyzer:
-    def __init__(self, model_path="./clinicalbert_finetuned"):
+    def __init__(self, model_path="Krishna2908/clinicalbert_finetuned"):
         self.model_path = model_path
 
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
